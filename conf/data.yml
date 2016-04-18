@@ -1,0 +1,65 @@
+User(homer):
+    firstName: Homer
+    lastName: Simpson
+    email: homer@simpson.com
+    password: secret
+    age: 30
+    nationality: American
+
+User(marge):
+    firstName: Marge
+    lastName: Simpson
+    email: marge@simpson.com
+    password: secret
+    age: 39
+    nationality: American
+
+User(bart):
+    firstName: Bart
+    lastName: Simpson
+    email: bart@simpson.com
+    password: secret
+    age: 7
+    nationality: American
+
+User(maggie):
+    firstName: Maggie
+    lastName: Simpson
+    email: maggie@simpson.com
+    password: secret
+    age: 1
+    nationality: American
+
+User(herb):
+    firstName: Herb
+    lastName: Simpson
+    email: herb@simpson.com
+    password: secret
+    age: 37
+    nationality: American
+
+
+User(barney):
+    firstName: Barney
+    lastName: Rubble
+    email: barney@rubble.com
+    password: secret
+    age: 50
+    nationality: American
+
+
+User(Moe):
+    firstName: Moe
+    lastName: Szylack
+    email: moe@syzlack.com
+    password: secret
+    age: 30
+    nationality: American
+
+User(david):
+    firstName: David
+    lastName: Roche
+    email: davidwroche@yahoo.co.uk
+    password: daver999
+    age: 29
+    nationality: Irish

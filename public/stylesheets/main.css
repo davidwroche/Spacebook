@@ -1,0 +1,23 @@
+body
+{
+	font-family: 'Droid Serif', serif;
+}
+#hold
+{
+	background-color:#000000;
+	background-image: url("/public/images/bck.jpg");
+}
+#center
+{
+	margin: auto;
+    width: 75%;
+    height: 80%;
+}
+#wrap
+{
+	word-wrap: break-word;
+}
+#larger
+{
+	font-size:20px;
+}

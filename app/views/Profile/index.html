@@ -1,0 +1,81 @@
+#{extends 'main.html' /}
+#{set title:'Profile' /}
+
+<nav class="ui menu"> 
+  <a class="ui item" href="/home">Home</a>      
+  <a class="ui item" href="/members">Members</a>   
+  <a class="ui active item" href="/profile">Profile</a>   
+  <a class="ui item" href="/logout">Logout</a>      
+</nav>
+
+<section class="ui segment">
+  <h2 class="ui header"> ${user.firstName} ${user.lastName}'s Profile</h2>
+  <h2>Email: ${user.email}</h2>
+  <h2>Age: ${user.age}</h2>
+  <h2>Nationality: ${user.nationality}</h2>
+  
+  <div class="ui two column grid segment">
+  
+    <div class="ui row">
+      <div class="ui column">
+      <h2>Avatar:</h2>
+        <p>
+          <img src="/profile/getpicture/${user.id}">
+        </p>
+        <form action="/profile/uploadpicture/${user.id}" method="post" enctype="multipart/form-data">    
+          <input type="file" value="Sign up" class="ui submit button" name="picture"> 
+          <input type="submit" value="upload" class="ui blue submit button">
+        </form>
+      </div>
+      
+      <div class="ui column">
+      <h2>Status</h2>
+        <div class="ui green block label">
+          <p> ${user.statusText} </p>
+        </div>
+        <hr>
+        <form action="/profile/changestatus" method="POST">
+          <h3 class="ui inverted teal block header">Enter Status</h3>
+          <textarea class="ui field" name="profiletext"> </textarea>
+          <br>
+          <input class="ui blue button" type="submit" name="submit" value="Change" />
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<details>
+<summary id = "larger">Update Info</summary>
+<section class="ui form segment">
+  <form action="/profile/editdetails" method="POST">
+    <div class="two fields">
+      <div class="field">
+        <label>First Name</label>
+        <input placeholder="First Name" type="text" name="firstName">
+      </div>
+      <div class="field">
+        <label>Last Name</label>
+        <input placeholder="Last Name" type="text" name="lastName">
+      </div> 
+    <div class="field">
+      <label>Email</label>
+      <input placeholder="Email" type="text" name="email">
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input type="password" name="password">
+    </div>
+    <div class="field">
+        <label>Age</label>
+        <input placeholder="Age" type="text" name="age">
+      </div>
+      <div class="field">
+        <label>Nationality</label>
+        <input placeholder="Nationality" type="text" name="nationality">
+      </div>
+       </div>
+       <br>
+    <button class="ui blue submit button">Submit</button>
+  </form>
+</section> 
+</details>

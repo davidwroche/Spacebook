@@ -1,0 +1,79 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+
+<nav class="ui menu"> 
+  <a class="ui active item" href="/home">Home</a>      
+  <a class="ui item" href="/members">Members</a>   
+  <a class="ui item" href="/profile">Profile</a>   
+  <a class="ui item" href="/logout">Logout</a> 
+</nav>
+
+
+<section class="ui blue segment">
+  <h2 class="ui header">Spacebook: Home Page for ${user.firstName} ${user.lastName}</h2>
+  <div class="ui two column grid segment">
+    <div class="ui row">
+      <div class="ui column">
+       <h2>Friends (${user.friendships.size()})</h2>
+        <div class="ui list">
+          #{list items:user.friendships, as:'friendship'}
+            <div class="item">
+              <i class="right triangle icon"></i>
+              <div class="content">
+              <img class="ui avatar image" src="/profile/getpicture/${friendship.targetUser.id}">
+              <span><a href="/publicprofile/${friendship.targetUser.id}"> ${friendship.targetUser.firstName} ${friendship.targetUser.lastName}</a><a href="/home/drop/${friendship.targetUser.id}"> drop </a></span>
+              </div>
+            </div>
+          #{/list}
+        </div>
+        </div>
+        </div>
+        </div>
+  </section>
+  
+  <h2 class="ui header">Messages</h2>
+  <div class="ui three column grid">
+  <div class="row">
+    <div class="column">Sender</div>
+    <div class="column">Subject</div>
+    <div class="column">Message</div>
+  </div>
+  <div class="column">  
+  #{list items:user.inbox, as:'message'}
+    <div class="content">
+    <span id = "wrap">
+                  <img class="ui avatar image" src="/profile/getpicture/${message.from.id}">
+              <span><a href="/publicprofile/${message.from.id}"> ${message.from.firstName}  ${message.from.lastName}</a></span>
+    
+      
+      </span>
+    </div>
+     #{/list}
+  </div>
+  
+  <div class="column">   
+  #{list items:user.inbox, as:'message'}
+    <div class="content">
+    <span id = "wrap">
+      ${message.subject}
+      </span>
+    </div>
+     <br>
+     #{/list}
+    
+  </div>
+  
+  <div class="column">   
+  #{list items:user.inbox, as:'message'}
+    <div class="content">
+    <span id = "wrap">
+      ${message.messageText}
+      </span>
+    </div>
+     <br>
+     #{/list}
+  </div>
+ </div>
+ 
+  
