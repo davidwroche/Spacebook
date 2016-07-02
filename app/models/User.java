@@ -5,7 +5,6 @@ import play.db.jpa.Model;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
-
 import javax.persistence.OneToMany;
 import play.db.jpa.Blob;
 import java.util.Date;
