@@ -20,6 +20,7 @@ public class Accounts extends Controller
 	public static void logout()
 	  {
 	    session.clear();
+	    Logger.info("You have been logged out");
 	    index();
 	  }
 	

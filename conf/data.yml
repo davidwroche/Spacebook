@@ -56,6 +56,7 @@ User(Moe):
     age: 30
     nationality: American
 
+
 User(david):
     firstName: David
     lastName: Roche
@@ -63,3 +64,157 @@ User(david):
     password: daver999
     age: 29
     nationality: Irish
+    friendships:
+                - friend1
+                - friend2
+
+
+User(deb):
+    firstName: Deb
+    lastName: Roche
+    email: deb@yahoo.co.uk
+    password: deb999
+    age: 31
+    nationality: Irish
+    friendships:
+                - friend3
+                - friend4
+
+
+User(mark):
+    firstName: Mark
+    lastName: Roche
+    email: markrnroche@yahoo.co.uk
+    password: mark999
+    age: 24
+    nationality: Irish
+    friendships:
+                - friend5
+                - friend6
+
+Message(message1):
+    from: david
+    to:   deb
+    subject:        'Hey'
+    messageText:    'How are things going?'
+    date:           2015-01-18
+
+Message(message2):
+    from: david
+    to:   deb
+    subject:        'Yo'
+    messageText:    'Long time no hear?'
+    date:           2014-01-18
+
+Message(message3):
+    from: david
+    to:   deb
+    subject:        'Open this'
+    messageText:    'Did you hear what happend to Mark?'
+    date:           2013-01-18
+
+Message(message4):
+    from: deb
+    to:   david
+    subject:        'Hey'
+    messageText:    'How are things going?'
+    date:           2012-01-18
+
+Message(message5):
+    from: deb
+    to:   david
+    subject:        'Yo'
+    messageText:    'Long time no hear?'
+    date:           2011-01-18
+
+Message(message6):
+    from: deb
+    to:   david
+    subject:        'Open this'
+    messageText:    'Did you hear what happend to Mark?'
+    date:           2009-01-18
+
+Message(message7):
+    from: david
+    to:   mark
+    subject:        'Hey'
+    messageText:    'How are things going?'
+    date:           20008-01-18
+
+Message(message8):
+    from: david
+    to:   mark
+    subject:        'Yo'
+    messageText:    'Long time no hear?'
+    date:           2007-01-18
+
+Message(message9):
+    from: david
+    to:   mark
+    subject:        'Open this'
+    messageText:    'Did you hear what happend to deb?'
+    date:           2006-01-18
+
+Message(message10):
+    from: mark
+    to:   deb
+    subject:        'Hey'
+    messageText:    'How are things going?'
+    date:           2005-01-18
+
+Message(message11):
+    from: mark
+    to:   deb
+    subject:        'Yo'
+    messageText:    'Long time no hear?'
+    date:           2004-01-18
+
+Message(message12):
+    from: mark
+    to:   deb
+    subject:        'Open this'
+    messageText:    'Did you hear what happend to david?'
+    date:           2003-01-18
+
+Message(message13):
+    from: mark
+    to:   david
+    subject:        'Open this'
+    messageText:    'Did you hear what happend to deb?'
+    date:           2002-01-18
+
+
+Message(message14):
+    from: mark
+    to:   david
+    subject:        'Open this'
+    messageText:    'Did you hear what happend to me?'
+    date:           2001-01-18
+
+Friendship(friend1):
+    sourceUser: david
+    targetUser: deb
+
+Friendship(friend2):
+    sourceUser: david
+    targetUser: mark
+
+Friendship(friend3):
+    sourceUser: deb
+    targetUser: mark
+
+Friendship(friend4):
+    sourceUser: deb
+    targetUser: david
+
+Friendship(friend5):
+    sourceUser: mark
+    targetUser: david
+
+Friendship(friend6):
+    sourceUser: mark
+    targetUser: deb
+
+
+
+

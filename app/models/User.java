@@ -4,11 +4,16 @@ import javax.persistence.Entity;
 import play.db.jpa.Model;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
+
 import javax.persistence.OneToMany;
 import play.db.jpa.Blob;
+import java.util.Date;
+import utils.MessageDateComparator;
+
+
 
 @Entity
-@Table(name="`User`") //This is necessary because User is a reserved word in PostGreSQL
 public class User extends Model
 {
   public String firstName;
@@ -22,6 +27,7 @@ public class User extends Model
   
   @OneToMany(mappedBy = "sourceUser")
   public List<Friendship> friendships = new ArrayList<Friendship>();
+  
 
   public User(String firstName, String lastName, String email, String password, String age, String nationality)
   {
@@ -73,11 +79,13 @@ public class User extends Model
     save();
   }
   
-  public void sendMessage (User to, String subject, String messageText)
+  
+  public void sendMessage (User to, String subject, String messageText, Date date)
   {
-    Message message = new Message (this, to, subject, messageText);
+    Message message = new Message (this, to, subject, messageText, date);
     outbox.add(message);
     to.inbox.add(message);
     message.save();
   }
+  
 }

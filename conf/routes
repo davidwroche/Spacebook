@@ -17,6 +17,7 @@ POST /register									Accounts.register
 
 # Home page
 GET     /home                                   Home.index
+GET 	/home/MessageDateComparator				Home.MessageDateComparator
 
 # Home page
 GET     /home/drop/{id}                       Home.drop

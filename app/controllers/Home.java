@@ -1,6 +1,8 @@
 package controllers;
 import play.*;
 import play.mvc.*;
+import utils.MessageDateComparator;
+import java.util.Collections;
 
 import java.util.*;
 
@@ -36,4 +38,11 @@ public class Home extends Controller
     Logger.info("Dropping " + friend.email);
     index();
   }  
+  
+  public static void MessageDateComparator(User user)
+  {
+	Collections.sort(user.inbox,new MessageDateComparator()); 
+	render(user);
+    
+  }
 }

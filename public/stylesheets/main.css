@@ -21,3 +21,9 @@ body
 {
 	font-size:20px;
 }
+#color
+{
+	color:#3333CC;
+	font-size:20px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}

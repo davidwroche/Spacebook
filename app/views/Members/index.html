@@ -8,16 +8,30 @@
   <a class="ui item" href="/login">Logout</a>      
 </nav>
 
+
 <section class="ui segment">
+
+  <table class="ui very basic collapsing celled table">
+  <thead>
   <h2 class="ui header">SpaceBook's Members</h2>
-  <div class="ui list">
-    #{list items:users, as:'user'}
-      <div class="item">
-        <i class="right triangle icon"></i> 
-        <div class="content">
-          ${user.firstName} ${user.lastName}  ${user.statusText} <a href="/members/follow/${user.id}"> (follow) </a>
+    <tr><th>Name</th>
+    <th>Status</th>
+  </tr></thead>
+  <tbody>
+  #{list items:users, as:'user'}
+    <tr>
+      <td>    
+        <h4 class="ui image header">
+        <i class="right triangle icon"></i>
+          <div class="content">
+          ${user.firstName} ${user.lastName} <a href="/members/follow/${user.id}"> (follow) </a> 
         </div>
-      </div> 
-    #{/list}
-  </div>
+      </h4></td>
+      <td>
+        ${user.statusText}
+      </td>
+    </tr>
+  </tbody>
+  #{/list}
+</table>
 </section>
