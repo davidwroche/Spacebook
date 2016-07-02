@@ -8,7 +8,7 @@ import java.util.Collections;
 import javax.persistence.OneToMany;
 import play.db.jpa.Blob;
 import java.util.Date;
-
+import javax.persistence.Table;
 
 
 @Entity
