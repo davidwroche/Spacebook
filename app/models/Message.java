@@ -6,7 +6,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Collections;
 
-import utils.MessageDateComparator;
 
 @Entity
 public class Message extends Model
