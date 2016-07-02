@@ -38,10 +38,4 @@ public class Home extends Controller
     index();
   }  
   
-  public static void MessageDateComparator(User user)
-  {
-	Collections.sort(user.inbox,new MessageDateComparator()); 
-	render(user);
-    
-  }
 }
